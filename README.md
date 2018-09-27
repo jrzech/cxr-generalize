@@ -36,10 +36,7 @@ Each results folder has individual output files from models:
 - `rollup_probs.csv` and `rollup_probs_nopivot.csv` files gives aggregated probabilities of pathology for each image in test 
 
 Individual files containing underlying code:
-- `CAM_CXRDataset.py`: special CXRDataset defined for CAM map
 - `CXRDataset.py`: Dataset used to load CXR
-- `CAM.py`: class activation map code
-- `CAM_Demo.ipynb`: CAM results analysis
 - `Eval.py`: code used for model evaluation
 - `model.py`: core model training code
 
