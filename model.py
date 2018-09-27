@@ -172,13 +172,12 @@ def train_model(model, criterion, optimizer, LR, num_epochs=5,dataloaders="x",da
 
             #decay if not best
             if phase == 'val' and epoch_loss > best_loss:
-                #normally we just decay if no improvement in val loss in epoch. 
-                #but this is not good with small datasets
-                #so I have this 'small_data' condition that insists on 5 passes at lr if dataset size <=10k
+                #normally we just decay if no improvement in val loss in epoch, but not ideal with small datasets
+                #so 'small_data' condition that insists on 5 passes at lr if dataset size <=10k
                 if small_data==False or iter_at_lr>=4:
                     print("decay loss from "+str(LR)+" to "+str(LR/10)+" as not seeing improvement in val loss")
                     LR = LR / 10
-                    #making a new optimizer works better as it zeros out momentum; just changing LR and keeping old momentum worked less well
+                    #making a new optimizer zeros out momentum
                     optimizer = optim.SGD(filter(lambda p:p.requires_grad, model.parameters()), lr = LR, momentum=0.9, weight_decay=1e-4)
                     iter_at_lr=0
                 else:
