@@ -24,14 +24,14 @@ To use this code to assess generalization performance of CNNs, you will need to 
 
 ## Code available
 
-The `RUN_ALL.sh` script runs all model training and evaluation code; be sure previous result folders are cleared/deleted before running. `1_batch`... to `5_batch....py`: these are run sequentially, 1-5, to generate results; `RUN_ALL.sh` runs them all.
+The `RUN_ALL.sh` script runs all model training and evaluation code; be sure previous result folders are cleared/deleted before running. `1_batch...` to `5_batch...py`: these are run sequentially, 1-5, to generate results; `RUN_ALL.sh` runs them all.
 
 Information on output generated:
 
 Each results folder has individual output files from models:
-- `last_layer`... refers to bottleneck features
-- `log_train`...gives training history
-- `preds`...gives predictions on test data for each model
+- `last_layer`refers to bottleneck features
+- `log_train`gives training history
+- `preds` gives predictions on test data for each model
 - `bottleneck.csv` gives activations from the final bottleneck layer
 - `rollup_probs.csv` and `rollup_probs_nopivot.csv` files gives aggregated probabilities of pathology for each image in test 
 
