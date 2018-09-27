@@ -6,7 +6,7 @@ Code used to evaluate generalization performance of CNN models to detect pneumon
 
 For those who are new to this work, I strongly suggest starting with the [reproduce-chexnet repo](https://github.com/jrzech/reproduce-chexnet), which is specifically designed to promote ease of use and reproducibility. It allows you to run code in the browser to get started with no local configuration needed:
 
-[![Illustration](https://www.github.com/jrzech/reproduce-chexnet/illustration.png?raw=true "Illustration")](https://github.com/jrzech/reproduce-chexnet)
+[![Illustration](https://www.github.com/jrzech/reproduce-chexnet/raw/master/illustration.png?raw=true "Illustration")](https://github.com/jrzech/reproduce-chexnet)
 
 It also contains instructions to allow you to quickly clone the repo and reproduce needed dependencies on your system using anaconda in a streamlined way. It is a good place to get started with this work and can serve as a stepping-stone to get your own independent projects based on CNNs started.
 
@@ -29,19 +29,19 @@ The `RUN_ALL.sh` script runs all model training and evaluation code; be sure pre
 Information on output generated:
 
 Each results folder has individual output files from models:
--`last_layer`... refers to bottleneck features
--`log_train`...gives training history
--`preds`...gives predictions on test data for each model
--`bottleneck.csv` gives activations from the final bottleneck layer
--`rollup_probs.csv` and `rollup_probs_nopivot.csv` files gives aggregated probabilities of pathology for each image in test 
+- `last_layer`... refers to bottleneck features
+- `log_train`...gives training history
+- `preds`...gives predictions on test data for each model
+- `bottleneck.csv` gives activations from the final bottleneck layer
+- `rollup_probs.csv` and `rollup_probs_nopivot.csv` files gives aggregated probabilities of pathology for each image in test 
 
 Individual files containing underlying code:
-`CAM_CXRDataset.py`: special CXRDataset defined for CAM map
-`CXRDataset.py`: Dataset used to load CXR
-`CAM.py`: class activation map code
-`CAM_Demo.ipynb`: CAM results analysis
-`Eval.py`: code used for model evaluation
-`model.py`: core model training code
+- `CAM_CXRDataset.py`: special CXRDataset defined for CAM map
+- `CXRDataset.py`: Dataset used to load CXR
+- `CAM.py`: class activation map code
+- `CAM_Demo.ipynb`: CAM results analysis
+- `Eval.py`: code used for model evaluation
+- `model.py`: core model training code
 
 
 
